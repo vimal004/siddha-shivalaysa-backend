@@ -41,6 +41,10 @@ app.post("/user", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.json("hello");
+});
+
 app.listen(3000, () => {
   console.log("Server running on port 3000");
 });
