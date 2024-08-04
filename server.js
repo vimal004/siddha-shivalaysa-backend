@@ -4,6 +4,8 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.json());
+
 mongoose
   .connect(
     "mongodb+srv://drsowmisiddha:V8xyZDudGXJJBCpw@cluster0.fnyuesa.mongodb.net/"
@@ -45,7 +47,7 @@ app.get("/", (req, res) => {
   res.json("hello");
 });
 
-const PORT = process.env.PORT || 3000;  
+const PORT = process.env.PORT || 3000;
 app.listen(3000, () => {
-  console.log(`Server running on port 3000${PORT}`);  
+  console.log(`Server running on port 3000${PORT}`);
 });
